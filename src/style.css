@@ -1,0 +1,45 @@
+input {
+    width: 100px;
+}
+#winorlose {
+    font-weight: bold;
+}
+.playerwin {
+    transform: rotate(180deg);
+    filter : saturate(0%);
+}
+body {
+    background-color:rgb(164, 175, 9);
+}
+.playerlose {
+    animation : shake 0.3s;
+}
+@keyframes shake {
+    20% { transform: translate(2px, 0);}
+    40% { transform: translate(0px, 0);}
+    60% { transform: translate(-2px, 0);}
+    80% { transform: translate(1px, 0);}
+    100% { transform: translate(-1px, 0);}
+}
+#chance {
+    font-style: italic;
+    font-size: small;
+    color : grey;
+}
+button {
+    background-color : green;
+}
+button.none {
+    background-color: green;
+    color : grey;
+}
+.none {
+    pointer-events: none;
+}
+#score {
+    padding-left: 300px;
+    font-size: 15px;
+}
+#winorlose {
+    padding-left : 380px;
+}

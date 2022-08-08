@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>hey Batman!</title>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="src/style.css">
+  </head>
+
+  <body>
+    <div><h2>"Hey, Batman! Let's play a game!"</h2></div>
+    <div><img src="src/riddler.jpg" alt="킹받는 리들러 사진"></div>
+    <div>Ridder just came out from fucking nowhere and ask you to play stupid game with him.</div>
+    <form id="playForm">
+        <ol>
+            <li>
+                <div>You pick a number between 0 and 
+                <input type="number" id="maxNumber" required min="0">
+                </div>
+            </li>
+            <li>
+            <div>Guess what number I'm thinking! : 
+              <input type="number" id="guessNumber" required min="0">
+              <button id="button">Play!</button>
+            </div>  
+            </li>    
+        </ol>  
+    </form>
+    <div id="chance"></div>
+    <div id="score"></div>
+    <div id="winorlose"></div>
+    <script src="src/index.js"></script>
+  </body>
+</html>
