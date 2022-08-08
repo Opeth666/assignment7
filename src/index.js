@@ -22,10 +22,13 @@ function playBtn(event) {
 
     score.innerText = `You chose ${guessNumber}. I chose ${randomNumber}.`
     if(randomNumber == guessNumber) {
-        winorlose.innerText = `You win!`;
+        riddler.classList.remove("playerlose");
+        riddler.classList.remove("playerwin");
+        winorlose.innerText = `Batman Wins!`;
+        void riddler.offsetWidth;
         riddler.classList.add("playerwin")
     } else {
-        winorlose.innerText = `You lose!`
+        winorlose.innerText = `Riddler Wins!`
         riddler.classList.remove("playerwin");
         riddler.classList.remove("playerlose");
         void riddler.offsetWidth;

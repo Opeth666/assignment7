@@ -5,9 +5,18 @@ input {
     font-weight: bold;
 }
 .playerwin {
-    transform: rotate(180deg);
-    filter : saturate(0%);
+    animation : dead 0.3s;
+    filter : saturate(0%) contrast(500%);
 }
+
+@keyframes dead {
+    20% { transform: translate(0, 2px);}
+    40% { transform: translate(0, 0);}
+    60% { transform: translate(0, -2px); filter :contrast(800%)}
+    80% { transform: translate(0, 1px);}
+    100% { transform: translate(0, -1px);}
+}
+
 body {
     background-color:rgb(164, 175, 9);
 }
@@ -15,11 +24,11 @@ body {
     animation : shake 0.3s;
 }
 @keyframes shake {
-    20% { transform: translate(2px, 0);}
-    40% { transform: translate(0px, 0);}
-    60% { transform: translate(-2px, 0);}
+    20% { transform: translate(2px, 0) rotate(3deg);}
+    40% { transform: translate(0px, 0); }
+    60% { transform: translate(-2px, 0) rotate(-3deg);}
     80% { transform: translate(1px, 0);}
-    100% { transform: translate(-1px, 0);}
+    100% { transform: translate(-1px, 0) rotate(3deg);}
 }
 #chance {
     font-style: italic;
@@ -41,5 +50,6 @@ button.none {
     font-size: 15px;
 }
 #winorlose {
-    padding-left : 380px;
+    padding-left : 300px;
+    font-size : 30px;
 }
